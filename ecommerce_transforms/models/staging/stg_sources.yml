@@ -2,8 +2,10 @@ version: 2
 
 sources:
   - name: staging
+    description: "Raw e-commerce data from the BigQuery staging dataset"
     schema: ecommerce_staging 
     tables:
       - name: users
       - name: orders
       - name: products
+      - name: order_items
