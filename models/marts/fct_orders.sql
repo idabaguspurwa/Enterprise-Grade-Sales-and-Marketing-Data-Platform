@@ -11,13 +11,12 @@ products AS (
 )
 
 SELECT
-    -- Key IDs from order_items
+    -- Key IDs
     order_items.order_item_id,
     order_items.order_id,
     order_items.product_id,
 
-    -- Customer ID from the orders table
-    orders.customer_id,
+    orders.user_id AS customer_id,
 
     -- Product details from the products table
     products.name AS product_name,
@@ -30,13 +29,10 @@ SELECT
     
     -- Financials
     order_items.sale_price,
-    -- NEW: Add the cost from the products table
     products.cost AS item_cost,
-    
-    -- NEW: Calculated metric for profit
     (order_items.sale_price - products.cost) AS item_profit,
 
-    -- NEW: Calculated metric for fulfillment time in hours
+    -- Timestamps
     TIMESTAMP_DIFF(orders.shipped_at, orders.created_at, HOUR) AS hours_to_ship
 
 FROM order_items
