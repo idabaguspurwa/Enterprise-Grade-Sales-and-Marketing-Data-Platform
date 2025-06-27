@@ -1,16 +1,38 @@
 name: dbt CI
 
-on: [pull_request]
+on:
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  dbt_build:
+  dbt_build_and_test:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: "actions/setup-python@v4"
+      - name: Checkout dbt project
+        uses: actions/checkout@v3
+
+      - name: Authenticate to Google Cloud
+        id: 'auth'
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+
+      - name: Set up Python
+        uses: "actions/setup-python@v4"
         with:
           python-version: "3.10"
+      
       - name: Install dbt
         run: pip install dbt-core dbt-bigquery
+
+      - name: Run dbt dependencies
+        run: dbt deps
+
       - name: Run dbt build
-        run: dbt deps && dbt build --profiles-dir path/to/your/profiles
+        run: dbt build --profiles-dir .
