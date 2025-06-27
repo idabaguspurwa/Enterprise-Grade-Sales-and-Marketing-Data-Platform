@@ -3,8 +3,9 @@ ecommerce_transforms:
   outputs:
     prod:
       type: bigquery
-      method: service-account
-      project: enterprisedata-464016 
-
+      method: oauth
+      project: enterprisedata-464016
       dataset: ecommerce_prod
       threads: 4
+      timeout_seconds: 300
+      location: asia-southeast1
