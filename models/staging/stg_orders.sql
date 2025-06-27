@@ -1,9 +1,9 @@
 SELECT
     order_id,
     user_id,
-    status,
+    status AS order_status,    
     gender,
-    created_at,
+    created_at AS order_created_at,
     returned_at,
     shipped_at,
     delivered_at,
