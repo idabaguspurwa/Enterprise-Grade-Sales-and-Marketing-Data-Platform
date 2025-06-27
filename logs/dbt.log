@@ -1,30 +1,282 @@
-[0m02:14:28.731238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8D8E3FCB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8DA233D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8DA2339D0>]}
+[0m02:22:35.898037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182AA0CFCB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182AB4ABD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182AB4AB9D0>]}
 
 
-============================== 02:14:28.755509 | cb3d398e-df3b-4a27-901b-984ea9893caa ==============================
-[0m02:14:28.755509 [info ] [MainThread]: Running with dbt=1.10.2
-[0m02:14:28.756411 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\idaba\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt init ecommerce_transforms', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
-[0m02:14:28.921678 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\idaba\.dbt
-[0m02:14:28.929417 [debug] [MainThread]: Starter project path: C:\Users\idaba\AppData\Local\Programs\Python\Python313\Lib\site-packages\dbt\include\starter_project
-[0m02:14:28.948250 [info ] [MainThread]: 
-Your new dbt project "ecommerce_transforms" was created!
+============================== 02:22:35.901037 | 2b4e4e4f-10ac-4dc3-afc6-65fdf509bdc6 ==============================
+[0m02:22:35.901037 [info ] [MainThread]: Running with dbt=1.10.2
+[0m02:22:35.901533 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\idaba\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\Projects\\Enterprise-Grade-Sales-and-Marketing-Data-Platform\\ecommerce_transforms\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m02:22:35.922353 [info ] [MainThread]: dbt version: 1.10.2
+[0m02:22:35.922799 [info ] [MainThread]: python version: 3.13.3
+[0m02:22:35.923114 [info ] [MainThread]: python path: C:\Users\idaba\AppData\Local\Programs\Python\Python313\python.exe
+[0m02:22:35.923376 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m02:22:38.170509 [info ] [MainThread]: Using profiles dir at C:\Users\idaba\.dbt
+[0m02:22:38.171250 [info ] [MainThread]: Using profiles.yml file at C:\Users\idaba\.dbt\profiles.yml
+[0m02:22:38.171863 [info ] [MainThread]: Using dbt_project.yml file at D:\Projects\Enterprise-Grade-Sales-and-Marketing-Data-Platform\ecommerce_transforms\dbt_project.yml
+[0m02:22:38.172483 [info ] [MainThread]: adapter type: bigquery
+[0m02:22:38.173182 [info ] [MainThread]: adapter version: 1.9.2
+[0m02:22:38.286044 [info ] [MainThread]: Configuration:
+[0m02:22:38.286770 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m02:22:38.287171 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m02:22:38.287568 [info ] [MainThread]: Required dependencies:
+[0m02:22:38.287968 [debug] [MainThread]: Executing "git --help"
+[0m02:22:38.347934 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m02:22:38.348368 [debug] [MainThread]: STDERR: "b''"
+[0m02:22:38.348640 [info ] [MainThread]:  - git [[32mOK found[0m]
 
-For more information on how to configure the profiles.yml file,
-please consult the dbt documentation here:
+[0m02:22:38.348949 [info ] [MainThread]: Connection:
+[0m02:22:38.349246 [info ] [MainThread]:   method: oauth
+[0m02:22:38.349506 [info ] [MainThread]:   database: enterprisedata-464016
+[0m02:22:38.349726 [info ] [MainThread]:   execution_project: enterprisedata-464016
+[0m02:22:38.349934 [info ] [MainThread]:   schema: ecommerce_prod
+[0m02:22:38.350132 [info ] [MainThread]:   location: asia-southeast1
+[0m02:22:38.350326 [info ] [MainThread]:   priority: None
+[0m02:22:38.350520 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m02:22:38.350729 [info ] [MainThread]:   impersonate_service_account: None
+[0m02:22:38.350922 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m02:22:38.351113 [info ] [MainThread]:   job_retries: 1
+[0m02:22:38.351300 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m02:22:38.351487 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m02:22:38.351671 [info ] [MainThread]:   timeout_seconds: 300
+[0m02:22:38.351868 [info ] [MainThread]:   client_id: None
+[0m02:22:38.352052 [info ] [MainThread]:   token_uri: None
+[0m02:22:38.352244 [info ] [MainThread]:   compute_region: None
+[0m02:22:38.352424 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m02:22:38.352967 [info ] [MainThread]:   gcs_bucket: None
+[0m02:22:38.353329 [info ] [MainThread]:   dataproc_batch: None
+[0m02:22:38.353986 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m02:22:39.199250 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m02:22:39.199752 [debug] [MainThread]: On debug: select 1 as id
+[0m02:22:39.200133 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:22:43.538307 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=enterprisedata-464016&j=bq:asia-southeast1:ad0a5b56-52fc-402a-8a6e-2dad06ac4220&page=queryresults
+[0m02:22:43.941776 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
 
-  https://docs.getdbt.com/docs/configure-your-profile
+[0m02:22:43.942670 [info ] [MainThread]: [32mAll checks passed![0m
+[0m02:22:43.943882 [debug] [MainThread]: Command `dbt debug` succeeded at 02:22:43.943738 after 8.21 seconds
+[0m02:22:43.944127 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m02:22:43.944353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182E3273E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182E3335D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182E31719D0>]}
+[0m02:22:43.944605 [debug] [MainThread]: Flushing usage events
+[0m02:22:45.051927 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:26:30.058930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F91CF0FCB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F91E2F7D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F91E2F79D0>]}
 
-One more thing:
 
-Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+============================== 02:26:30.062362 | 207aa772-b33b-417d-8fe5-29e883ba8825 ==============================
+[0m02:26:30.062362 [info ] [MainThread]: Running with dbt=1.10.2
+[0m02:26:30.062932 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\idaba\\.dbt', 'log_path': 'D:\\Projects\\Enterprise-Grade-Sales-and-Marketing-Data-Platform\\ecommerce_transforms\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m02:26:32.628410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '207aa772-b33b-417d-8fe5-29e883ba8825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F91D613360>]}
+[0m02:26:32.693379 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '207aa772-b33b-417d-8fe5-29e883ba8825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F955EFF350>]}
+[0m02:26:32.694434 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m02:26:33.289461 [debug] [MainThread]: checksum: 1adc40777973ef30f45f80b3b6d04d5013c1edd53d96363881b3b199e612468b, vars: {}, profile: , target: , version: 1.10.2
+[0m02:26:33.290332 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m02:26:33.291080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '207aa772-b33b-417d-8fe5-29e883ba8825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F957310150>]}
+[0m02:26:34.368082 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '207aa772-b33b-417d-8fe5-29e883ba8825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F956078140>]}
+[0m02:26:34.450591 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Projects\Enterprise-Grade-Sales-and-Marketing-Data-Platform\ecommerce_transforms\target\manifest.json
+[0m02:26:34.452696 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Projects\Enterprise-Grade-Sales-and-Marketing-Data-Platform\ecommerce_transforms\target\semantic_manifest.json
+[0m02:26:34.502871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '207aa772-b33b-417d-8fe5-29e883ba8825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9575E4670>]}
+[0m02:26:34.503472 [info ] [MainThread]: Found 5 models, 4 data tests, 3 sources, 493 macros
+[0m02:26:34.504217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '207aa772-b33b-417d-8fe5-29e883ba8825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F95739A8F0>]}
+[0m02:26:34.506398 [info ] [MainThread]: 
+[0m02:26:34.507027 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m02:26:34.507429 [info ] [MainThread]: 
+[0m02:26:34.507970 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m02:26:34.511666 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_enterprisedata-464016'
+[0m02:26:34.511908 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:26:35.985004 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_enterprisedata-464016_ecommerce_prod'
+[0m02:26:35.985349 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:26:36.179112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '207aa772-b33b-417d-8fe5-29e883ba8825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9575AFAD0>]}
+[0m02:26:36.179837 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:26:36.195222 [debug] [Thread-3 (]: Began running node model.ecommerce_transforms.stg_users
+[0m02:26:36.195594 [debug] [Thread-1 (]: Began running node model.ecommerce_transforms.my_first_dbt_model
+[0m02:26:36.195851 [debug] [Thread-2 (]: Began running node model.ecommerce_transforms.stg_orders
+[0m02:26:36.196236 [info ] [Thread-3 (]: 3 of 5 START sql view model ecommerce_prod.stg_users ........................... [RUN]
+[0m02:26:36.197315 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.ecommerce_transforms.stg_users'
+[0m02:26:36.196613 [info ] [Thread-1 (]: 1 of 5 START sql table model ecommerce_prod.my_first_dbt_model ................. [RUN]
+[0m02:26:36.197673 [debug] [Thread-3 (]: Began compiling node model.ecommerce_transforms.stg_users
+[0m02:26:36.198002 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.ecommerce_transforms.my_first_dbt_model'
+[0m02:26:36.196967 [info ] [Thread-2 (]: 2 of 5 START sql view model ecommerce_prod.stg_orders .......................... [RUN]
+[0m02:26:36.204310 [debug] [Thread-3 (]: Writing injected SQL for node "model.ecommerce_transforms.stg_users"
+[0m02:26:36.204651 [debug] [Thread-1 (]: Began compiling node model.ecommerce_transforms.my_first_dbt_model
+[0m02:26:36.205005 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.ecommerce_transforms.stg_orders'
+[0m02:26:36.207293 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_transforms.my_first_dbt_model"
+[0m02:26:36.207701 [debug] [Thread-2 (]: Began compiling node model.ecommerce_transforms.stg_orders
+[0m02:26:36.209356 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_transforms.stg_orders"
+[0m02:26:36.210751 [debug] [Thread-3 (]: Began executing node model.ecommerce_transforms.stg_users
+[0m02:26:36.238531 [debug] [Thread-3 (]: Writing runtime sql for node "model.ecommerce_transforms.stg_users"
+[0m02:26:36.239089 [debug] [Thread-1 (]: Began executing node model.ecommerce_transforms.my_first_dbt_model
+[0m02:26:36.247552 [debug] [Thread-2 (]: Began executing node model.ecommerce_transforms.stg_orders
+[0m02:26:36.249492 [debug] [Thread-2 (]: Writing runtime sql for node "model.ecommerce_transforms.stg_orders"
+[0m02:26:36.266037 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_transforms.my_first_dbt_model"
+[0m02:26:36.268329 [debug] [Thread-3 (]: On model.ecommerce_transforms.stg_users: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "ecommerce_transforms", "target_name": "dev", "node_id": "model.ecommerce_transforms.stg_users"} */
 
-  https://community.getdbt.com/
 
-Happy modeling!
+  create or replace view `enterprisedata-464016`.`ecommerce_prod`.`stg_users`
+  OPTIONS()
+  as SELECT
+    id AS user_id,
+    first_name,
+    last_name,
+    email,
+    age,
+    gender,
+    state,
+    street_address,
+    postal_code,
+    city,
+    country,
+    traffic_source,
+    created_at
+FROM
+    `enterprisedata-464016`.`ecommerce_staging`.`users`;
 
-[0m02:14:28.949109 [info ] [MainThread]: Setting up your profile.
-[0m02:18:47.738984 [info ] [MainThread]: Profile ecommerce_transforms written to C:\Users\idaba\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
-[0m02:18:47.740534 [debug] [MainThread]: Command `dbt init` succeeded at 02:18:47.740385 after 259.26 seconds
-[0m02:18:47.740871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8921CD5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8921C2450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E89218D590>]}
-[0m02:18:47.741167 [debug] [MainThread]: Flushing usage events
-[0m02:18:49.056128 [debug] [MainThread]: An error was encountered while trying to flush usage events
+
+[0m02:26:36.268642 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m02:26:36.269909 [debug] [Thread-1 (]: On model.ecommerce_transforms.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "ecommerce_transforms", "target_name": "dev", "node_id": "model.ecommerce_transforms.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `enterprisedata-464016`.`ecommerce_prod`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m02:26:36.270267 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m02:26:36.271096 [debug] [Thread-2 (]: On model.ecommerce_transforms.stg_orders: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "ecommerce_transforms", "target_name": "dev", "node_id": "model.ecommerce_transforms.stg_orders"} */
+
+
+  create or replace view `enterprisedata-464016`.`ecommerce_prod`.`stg_orders`
+  OPTIONS()
+  as SELECT
+    order_id,
+    user_id,
+    status,
+    gender,
+    created_at,
+    returned_at,
+    shipped_at,
+    delivered_at,
+    num_of_item
+FROM
+    `enterprisedata-464016`.`ecommerce_staging`.`orders`;
+
+
+[0m02:26:36.271574 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m02:26:36.577571 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=enterprisedata-464016&j=bq:asia-southeast1:b8b8c9a8-0a0b-4fa4-9829-35a4e481337a&page=queryresults
+[0m02:26:36.781558 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=enterprisedata-464016&j=bq:asia-southeast1:ba145ac4-9536-47b6-8cd0-69b6cccea335&page=queryresults
+[0m02:26:37.069556 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '207aa772-b33b-417d-8fe5-29e883ba8825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9577D66D0>]}
+[0m02:26:37.070067 [info ] [Thread-2 (]: 2 of 5 OK created sql view model ecommerce_prod.stg_orders ..................... [[32mCREATE VIEW (0 processed)[0m in 0.86s]
+[0m02:26:37.070562 [debug] [Thread-2 (]: Finished running node model.ecommerce_transforms.stg_orders
+[0m02:26:37.808767 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=enterprisedata-464016&j=bq:asia-southeast1:300bcf41-056f-415f-878d-e13287e6e234&page=queryresults
+[0m02:26:37.990697 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '207aa772-b33b-417d-8fe5-29e883ba8825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F957B40910>]}
+[0m02:26:37.991355 [info ] [Thread-3 (]: 3 of 5 OK created sql view model ecommerce_prod.stg_users ...................... [[32mCREATE VIEW (0 processed)[0m in 1.79s]
+[0m02:26:37.992628 [debug] [Thread-3 (]: Finished running node model.ecommerce_transforms.stg_users
+[0m02:26:37.994098 [debug] [Thread-4 (]: Began running node model.ecommerce_transforms.dim_customers
+[0m02:26:37.994887 [info ] [Thread-4 (]: 4 of 5 START sql view model ecommerce_prod.dim_customers ....................... [RUN]
+[0m02:26:37.995834 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.ecommerce_transforms.dim_customers'
+[0m02:26:37.996201 [debug] [Thread-4 (]: Began compiling node model.ecommerce_transforms.dim_customers
+[0m02:26:37.998088 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_transforms.dim_customers"
+[0m02:26:37.998850 [debug] [Thread-4 (]: Began executing node model.ecommerce_transforms.dim_customers
+[0m02:26:38.006460 [debug] [Thread-4 (]: Writing runtime sql for node "model.ecommerce_transforms.dim_customers"
+[0m02:26:38.010895 [debug] [Thread-4 (]: On model.ecommerce_transforms.dim_customers: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "ecommerce_transforms", "target_name": "dev", "node_id": "model.ecommerce_transforms.dim_customers"} */
+
+
+  create or replace view `enterprisedata-464016`.`ecommerce_prod`.`dim_customers`
+  OPTIONS()
+  as SELECT
+    user_id AS customer_id,
+    first_name,
+    last_name,
+    email,
+    age,
+    gender,
+    city,
+    state,
+    country,
+    traffic_source,
+    EXTRACT(YEAR FROM created_at) AS registration_year
+FROM
+    `enterprisedata-464016`.`ecommerce_prod`.`stg_users`;
+
+
+[0m02:26:38.011435 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m02:26:38.058742 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '207aa772-b33b-417d-8fe5-29e883ba8825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F955FE0950>]}
+[0m02:26:38.059365 [info ] [Thread-1 (]: 1 of 5 OK created sql table model ecommerce_prod.my_first_dbt_model ............ [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 1.86s]
+[0m02:26:38.060398 [debug] [Thread-1 (]: Finished running node model.ecommerce_transforms.my_first_dbt_model
+[0m02:26:38.061201 [debug] [Thread-2 (]: Began running node model.ecommerce_transforms.my_second_dbt_model
+[0m02:26:38.061814 [info ] [Thread-2 (]: 5 of 5 START sql view model ecommerce_prod.my_second_dbt_model ................. [RUN]
+[0m02:26:38.062240 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ecommerce_transforms.stg_orders, now model.ecommerce_transforms.my_second_dbt_model)
+[0m02:26:38.062450 [debug] [Thread-2 (]: Began compiling node model.ecommerce_transforms.my_second_dbt_model
+[0m02:26:38.064635 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_transforms.my_second_dbt_model"
+[0m02:26:38.065949 [debug] [Thread-2 (]: Began executing node model.ecommerce_transforms.my_second_dbt_model
+[0m02:26:38.069320 [debug] [Thread-2 (]: Writing runtime sql for node "model.ecommerce_transforms.my_second_dbt_model"
+[0m02:26:38.070315 [debug] [Thread-2 (]: On model.ecommerce_transforms.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "ecommerce_transforms", "target_name": "dev", "node_id": "model.ecommerce_transforms.my_second_dbt_model"} */
+
+
+  create or replace view `enterprisedata-464016`.`ecommerce_prod`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `enterprisedata-464016`.`ecommerce_prod`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m02:26:38.070623 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:26:38.851443 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=enterprisedata-464016&j=bq:asia-southeast1:aaaea59c-e308-4117-bc96-1ee23db24b87&page=queryresults
+[0m02:26:38.866845 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=enterprisedata-464016&j=bq:asia-southeast1:a1e0699c-f2da-4c73-8f35-324cb43cc6f9&page=queryresults
+[0m02:26:39.059449 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '207aa772-b33b-417d-8fe5-29e883ba8825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F95784CC90>]}
+[0m02:26:39.060052 [info ] [Thread-4 (]: 4 of 5 OK created sql view model ecommerce_prod.dim_customers .................. [[32mCREATE VIEW (0 processed)[0m in 1.06s]
+[0m02:26:39.061185 [debug] [Thread-4 (]: Finished running node model.ecommerce_transforms.dim_customers
+[0m02:26:39.075910 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '207aa772-b33b-417d-8fe5-29e883ba8825', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F9575C7AD0>]}
+[0m02:26:39.076379 [info ] [Thread-2 (]: 5 of 5 OK created sql view model ecommerce_prod.my_second_dbt_model ............ [[32mCREATE VIEW (0 processed)[0m in 1.01s]
+[0m02:26:39.076840 [debug] [Thread-2 (]: Finished running node model.ecommerce_transforms.my_second_dbt_model
+[0m02:26:39.078116 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m02:26:39.078727 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:26:39.078925 [debug] [MainThread]: Connection 'list_enterprisedata-464016' was properly closed.
+[0m02:26:39.079088 [debug] [MainThread]: Connection 'list_enterprisedata-464016_ecommerce_prod' was properly closed.
+[0m02:26:39.079284 [debug] [MainThread]: Connection 'model.ecommerce_transforms.stg_users' was properly closed.
+[0m02:26:39.079430 [debug] [MainThread]: Connection 'model.ecommerce_transforms.my_first_dbt_model' was properly closed.
+[0m02:26:39.079578 [debug] [MainThread]: Connection 'model.ecommerce_transforms.my_second_dbt_model' was properly closed.
+[0m02:26:39.079714 [debug] [MainThread]: Connection 'model.ecommerce_transforms.dim_customers' was properly closed.
+[0m02:26:39.079917 [info ] [MainThread]: 
+[0m02:26:39.080230 [info ] [MainThread]: Finished running 1 table model, 4 view models in 0 hours 0 minutes and 4.57 seconds (4.57s).
+[0m02:26:39.081010 [debug] [MainThread]: Command end result
+[0m02:26:39.094662 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Projects\Enterprise-Grade-Sales-and-Marketing-Data-Platform\ecommerce_transforms\target\manifest.json
+[0m02:26:39.096491 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Projects\Enterprise-Grade-Sales-and-Marketing-Data-Platform\ecommerce_transforms\target\semantic_manifest.json
+[0m02:26:39.101566 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Projects\Enterprise-Grade-Sales-and-Marketing-Data-Platform\ecommerce_transforms\target\run_results.json
+[0m02:26:39.102067 [info ] [MainThread]: 
+[0m02:26:39.102616 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:26:39.102929 [info ] [MainThread]: 
+[0m02:26:39.103205 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m02:26:39.103705 [debug] [MainThread]: Command `dbt run` succeeded at 02:26:39.103627 after 9.18 seconds
+[0m02:26:39.103931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F957B2FD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F957B2FA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F957B2F770>]}
+[0m02:26:39.104143 [debug] [MainThread]: Flushing usage events
+[0m02:26:40.733698 [debug] [MainThread]: An error was encountered while trying to flush usage events
