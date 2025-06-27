@@ -1,0 +1,16 @@
+name: dbt CI
+
+on: [pull_request]
+
+jobs:
+  dbt_build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: "actions/setup-python@v4"
+        with:
+          python-version: "3.10"
+      - name: Install dbt
+        run: pip install dbt-core dbt-bigquery
+      - name: Run dbt build
+        run: dbt deps && dbt build --profiles-dir path/to/your/profiles
