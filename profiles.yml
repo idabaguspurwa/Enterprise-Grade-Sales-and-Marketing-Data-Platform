@@ -4,6 +4,7 @@ ecommerce_transforms:
     prod:
       type: bigquery
       method: service-account
-      project: "{{ env_var('GCP_PROJECT') }}"
+      project: enterprisedata-464016 
+
       dataset: ecommerce_prod
       threads: 4
