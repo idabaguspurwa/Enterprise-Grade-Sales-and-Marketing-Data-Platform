@@ -54,18 +54,35 @@ The final output of this data platform powers a comprehensive business intellige
 ## Data Flow Architecture
 
 ```mermaid
-graph LR
-    A[Raw CSV Files] --> B[Google Cloud Storage]
-    B --> C[BigQuery Staging]
-    C --> D[dbt Transformations]
-    D --> E[BigQuery Data Marts]
-    E --> F[Looker Studio Dashboard]
-    
-    G[Cloud Composer/Airflow] -.-> B
-    G -.-> C
-    G -.-> D
-    
-    H[Terraform] -.-> I[GCP Infrastructure]
+graph TD
+    subgraph "Infrastructure & Orchestration"
+        A[Terraform] --> B(GCP Infrastructure)
+        C(Cloud Composer / Airflow)
+    end
+
+    subgraph "ELT Data Pipeline"
+        D[Raw CSV Files in GCS] --> |Data Loading| E[BigQuery Staging Tables]
+        E --> |Data Transformation| F(dbt Models)
+        F --> |Clean & Tested Data| G[BigQuery Data Marts]
+        G --> |Business Intelligence| H(Looker Studio Dashboard)
+    end
+
+    subgraph "Data Quality & Testing"
+        I(dbt Tests)
+        F -.-> |Validates| I
+        I -.-> |Ensures Quality| G
+    end
+
+    C -.-> |Orchestrates Loading| E
+    C -.-> |Triggers Transformation| F
+    B -.-> |Provisions Resources| D
+    B -.-> |Provisions Resources| E
+    B -.-> |Provisions Resources| G
+
+    style C fill:#9575cd,stroke:#fff,stroke-width:2px,color:#fff
+    style F fill:#ff9800,stroke:#fff,stroke-width:2px,color:#fff
+    style H fill:#4caf50,stroke:#fff,stroke-width:2px,color:#fff
+    style I fill:#f44336,stroke:#fff,stroke-width:2px,color:#fff
 ```
 
 ## Project Structure
