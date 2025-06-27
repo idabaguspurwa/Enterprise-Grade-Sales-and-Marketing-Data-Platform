@@ -3,7 +3,7 @@ ecommerce_transforms:
   outputs:
     prod:
       type: bigquery
-      method: service_account
+      method: service-account
       project: "{{ env_var('GCP_PROJECT') }}"
       dataset: ecommerce_prod
       threads: 4
